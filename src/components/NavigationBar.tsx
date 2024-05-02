@@ -21,7 +21,7 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
     <header>
 
 
-      <nav className="navbar navbar-expand-lg pb-0">
+      <nav className="navbar navbar-expand-lg  fixed-top bg-white shadow">
         <div className="container">
           <a className="navbar-brand" href="#homePage"><img src={imagePath} alt={brandName} /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
