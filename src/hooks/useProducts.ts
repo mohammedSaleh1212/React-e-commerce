@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import apiClient from "../services/api-client"
-import { CanceledError } from "axios"
+import {  CanceledError } from "axios"
+import { ProductQuery } from "../App"
 export interface Rating {
 rate:number
 count:number
@@ -16,7 +17,7 @@ export interface Product {
     rating:Rating
 
 }
-const useProducts = () => {
+const useProducts = (productQuery:ProductQuery  ) => {
     const[products , setProducts] = useState<Product[]>([])
     const [error , setError] = useState('')
     const[isLoading , setLoading] = useState(false)
@@ -24,8 +25,8 @@ const useProducts = () => {
     useEffect(() => {
         const controller = new AbortController()
         setLoading(true)
-        apiClient.get<Product[]>('/products' , {signal:controller.signal})
-        .then(
+       apiClient.get<Product[]>(`/products/${productQuery.category && productQuery.category!=='all' ? `category/${productQuery.category}`:''}` , {signal:controller.signal})  
+                .then(
             (res) => {
                 setProducts(res.data)
                 setLoading(false)
@@ -40,7 +41,7 @@ const useProducts = () => {
         }
         )
         return () => controller.abort()
-    },[])
+    },[productQuery])
     return {products , error,isLoading}
 }
 export default useProducts

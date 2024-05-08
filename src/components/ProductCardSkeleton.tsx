@@ -1,6 +1,5 @@
 
-import React from 'react'
-import skeletonImg from '../assets/no-image-placeholder-6f3882e0.webp'
+
 
 const ProductCardSkeleton = () => {
   return (

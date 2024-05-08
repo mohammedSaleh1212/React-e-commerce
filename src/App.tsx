@@ -1,36 +1,22 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 
-import NavigationBar from './components/NavigationBar'
 import './App.css'
 import HomePage from './screens/HomePage'
 import ProductGrid from './components/ProductGrid'
+import CategoryList from './components/CategoryList'
+export interface ProductQuery {
+  category:string | null
+}
 
 function App() {
-  // interface Product {
-  //   id:number,
-  //   image:string
-  // }
-  // interface apiRes {
-  //   id:number,
-  //   image:string
-  // }
-  // const [apiRes , setApiRes] = useState<apiRes[]>([])
-  // useEffect(() => {
-  //   fetch("https://fakestoreapi.com/products")
-  //   .then(response => response.json())
-  //   .then(data => setApiRes(data))
-  // },[])
-  // return (
-  //   <>
-  //   {apiRes ? apiRes.map(apiRes => <img src={apiRes.image} alt="" /> ):null}
-
-  //   </>
-  // )
+  // const [selectedCategory , setSelectedCategory] = useState<string | null>(null)
+const[productQuery , setProductQuery] = useState<ProductQuery>({} as ProductQuery)
   return(
     <>
     
     <HomePage />
-    <ProductGrid />
+    <CategoryList selectedCategory={productQuery.category} onSelectCategory={(category) =>setProductQuery({...productQuery ,  category})}/>
+    <ProductGrid  productQuery={productQuery} />
     </>
 
   )

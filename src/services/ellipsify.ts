@@ -1,6 +1,6 @@
-export default function ellipsify (str:string) {
-    if (str.length > 20) {
-        return (str.substring(0, 20) + "...");
+export default function ellipsify (str:string , x:number) {
+    if (str.length > x) {
+        return (str.substring(0, x) + "...");
     }
     else {
         return str;
