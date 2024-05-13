@@ -1,7 +1,7 @@
 // deleeeeeeeeeeeeeeeeeeeet
 
 import { useEffect, useState } from "react"
-import apiClient from "../services/api-client"
+import apiClient from "../services/apiClient"
 import { CanceledError } from "axios"
 
 
