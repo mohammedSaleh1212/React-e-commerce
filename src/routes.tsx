@@ -7,7 +7,7 @@ import ErrorPage from './pages/ErrorPage'
 
 
 const router = createBrowserRouter([
-    {path:'/' , 
+    {path:'/React-e-commerce/' , 
     element:<Layout />,
     errorElement:<ErrorPage /> ,
     children:[
