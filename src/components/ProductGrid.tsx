@@ -4,8 +4,8 @@ import Loader from './Loader'
 import ProductCard from './ProductCard'
 import '../styles/ProductGrid.css'
 
-
 const ProductGrid = () => {
+
     const { data:products, error, isLoading } = useProducts()
     // const skeletons  = [1,2,3,4,5,6,7,8]
     
@@ -19,7 +19,7 @@ const ProductGrid = () => {
 
             <div className=" products-container row container-fluid  mx-auto justify-content-center  ">
                 {isLoading && <Loader />}
-                {products?.map((product,index) => <ProductCard key={index} product={product} />)}
+                {products?.map((product,index) => <ProductCard key={index} product={product}  />)}
 
             </div>
 

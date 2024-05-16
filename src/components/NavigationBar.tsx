@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../styles/NavigationBar.css'
+import { Link } from 'react-router-dom'
 
 
 interface navItem {
@@ -23,7 +24,7 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
 
       <nav className="navbar navbar-expand-lg  fixed-top bg-white shadow">
         <div className="container">
-          <a className="navbar-brand" href="#homePage"><img src={imagePath} alt={brandName} /></a>
+          <Link className="navbar-brand" to="/"><img src={imagePath} alt={brandName} /></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -37,7 +38,7 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
                     onClick={() => setSelectedIndex(index)}
                   >
 
-                    <a
+                    <Link
                       className={
                         selectedIndex == index
                           ? "nav-link active fw-bold"
@@ -45,24 +46,24 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
 
                       }
 
-                      href={navItem.url}
+                      to={navItem.url}
                     >
                       {navItem.title}
-                    </a>
+                    </Link>
                   </li>
                   :
 
 
 
                   <li className="nav-item dropdown" key={navItem.title}>
-                    <a className="nav-link dropdown-toggle d-flex gap-2 align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <Link className="nav-link dropdown-toggle d-flex gap-2 align-items-center" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       {navItem.title}
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu">
 
                       {navItem.subMenu.map(subItem =>
 
-                        <li key={subItem.title}><a className="dropdown-item" href={subItem.url}>{subItem.title}</a></li>
+                        <li key={subItem.title}><Link className="dropdown-item" to={subItem.url}>{subItem.title}</Link></li>
 
                       )}
 

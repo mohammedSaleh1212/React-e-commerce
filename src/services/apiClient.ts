@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios from "axios";
 const axiosInstance = axios.create({
     baseURL:'https://fakestoreapi.com'
 })
@@ -14,6 +14,11 @@ getAll = () => {
  .get<T[]>(this.endpoint )
  .then(res =>res.data)   
 }
+getOne = (id:string | number) => {
+    return axiosInstance
+    .get<T>(this.endpoint + '/' + id )
+    .then(res =>res.data)   
+   }
 post = (data:T) => {
     return axiosInstance
     .post<T>(this.endpoint , data)

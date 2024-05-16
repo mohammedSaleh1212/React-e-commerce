@@ -1,7 +1,11 @@
 export const menuItemsData = [
     {
-      title: 'Franchise Opportunities',
+      title: 'Home',
       url: '/',
+    },
+    {
+      title: 'Facility Services',
+      url: '/about',
     },
     {
       title: 'Cleaning Services',
@@ -41,10 +45,7 @@ export const menuItemsData = [
         },
       ],
     },
-    {
-      title: 'Facility Services',
-      url: '/about',
-    },
+
 
       {
         title: 'About Us',
