@@ -8,7 +8,7 @@ import CartList from './components/cart/CartList'
 
 
 const router = createBrowserRouter([
-    {path:'/React-e-commerce/' , 
+    {path:'/' , 
     element:<Layout />,
     errorElement:<ErrorPage /> ,
     children:[
