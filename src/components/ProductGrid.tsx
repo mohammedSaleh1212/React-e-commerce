@@ -7,6 +7,7 @@ import '../styles/ProductGrid.css'
 const ProductGrid = () => {
 
     const { data:products, error, isLoading } = useProducts()
+
     // const skeletons  = [1,2,3,4,5,6,7,8]
     
                 if(isLoading) return <p>loading</p>
@@ -32,3 +33,5 @@ const ProductGrid = () => {
 }
 
 export default ProductGrid
+
+

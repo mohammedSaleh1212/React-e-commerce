@@ -5,7 +5,7 @@ export const menuItemsData = [
     },
     {
       title: 'Facility Services',
-      url: '/about',
+      url: '/cart',
     },
     {
       title: 'Cleaning Services',

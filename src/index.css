@@ -1,6 +1,26 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import "bootstrap-icons/font/bootstrap-icons.css";
 .btn-first {
-    background-color: coral;
+    /* background-color: coral; */
+    background-color: white;
+    color: #000000;
+    font-weight: 500;
+    border: solid 1px #b4acac;
     border-radius: 20px;
+    cursor: pointer;
+}
+.btn-first:hover {
+    color: white;
+    background-color: #000000;
+}
+.active-category {
+    color: white;
+    background-color: #000000;
+}
+.selected-button {
+    color: white;
+    background-color: #000000;
+}
+.cursro-pointer {
+    cursor: pointer;
 }

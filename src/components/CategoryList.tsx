@@ -13,9 +13,9 @@ const CategoryList = () => {
 
   return (
 
-    <div className=" ps-5 d-flex justify-content-start flex-wrap gap-2" >
+    <div className=" ps-0 ps-md-5  d-flex justify-content-center justify-content-md-start flex-wrap gap-2" >
 
-      {categories?.map((category) => <button className={`btn btn-first ${selectedCategory === category ? ' text-black' : 'text-white'}`} key={category} onClick={() => setSelectedCategory(category)}>{category}</button>
+      {categories?.map((category) => <button className={`btn btn-first ${selectedCategory === category ? ' active-category' : ''}`} key={category} onClick={() => setSelectedCategory(category)}>{category}</button>
 
 
 

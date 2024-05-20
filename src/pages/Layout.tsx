@@ -8,7 +8,7 @@ const Layout = () => {
     <>
     
     <NavigationBar  brandName='Jani King' imagePath={logo} navItems={menuItemsData}  />
-    <div className="outlet-container" style={{paddingTop:'100px'}}>
+    <div className="outlet-container" style={{paddingTop:'100px',paddingBottom:'50px'}}>
 
     <Outlet />
     </div>

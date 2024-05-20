@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 import APIClient from "../services/apiClient"
-import { Product } from "./useProducts"
+import { Product } from "../entities/Product"
 
 const apiClient = new APIClient<Product>('/products/')
 const useProduct = (id:string) => {

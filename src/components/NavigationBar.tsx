@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../styles/NavigationBar.css'
 import { Link } from 'react-router-dom'
+import Cart from './cart/CartCounter'
 
 
 interface navItem {
@@ -29,7 +30,7 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul className=" navbar-nav  gap-5">
+            <ul className=" navbar-nav   gap-5">
               {navItems.map((navItem, index) => (
                 !navItem.subMenu ?
                   <li
@@ -59,7 +60,7 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
                     <Link className="nav-link dropdown-toggle d-flex gap-2 align-items-center" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       {navItem.title}
                     </Link>
-                    <ul className="dropdown-menu">
+                    <ul className="dropdown-menu position-absolute">
 
                       {navItem.subMenu.map(subItem =>
 
@@ -74,7 +75,10 @@ const NavigationBar = ({ brandName, imagePath, navItems }: Props) => {
 
               ))}
             </ul>
+<Link to={'./cart'} style={{textDecoration:'none',color:'black'}}>
 
+          <Cart/>
+</Link>
           </div>
         </div>
       </nav>

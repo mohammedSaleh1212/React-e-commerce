@@ -4,10 +4,11 @@ import Layout from './pages/Layout'
 import HomePage from './pages/HomePage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import ErrorPage from './pages/ErrorPage'
+import CartList from './components/cart/CartList'
 
 
 const router = createBrowserRouter([
-    {path:'/React-e-commerce/' , 
+    {path:'/' , 
     element:<Layout />,
     errorElement:<ErrorPage /> ,
     children:[
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
         {index:true , element:<HomePage />},
         {path:'products/:id' , element:<ProductDetailPage />},
         // {path:'products/' , element:<HomePage />,children:[  {path:':id' , element:<ProductDetails />},]},
+        {   path:'/cart', element:<CartList />}
     
     ]
 }
