@@ -1,7 +1,7 @@
 export const menuItemsData = [
     {
       title: 'Home',
-      url: '/',
+      url: '/React-e-commerce',
     },
     {
       title: 'Facility Services',

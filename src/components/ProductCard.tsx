@@ -40,7 +40,7 @@ const ProductCard = ({ product }: Props) => {
                     <img src={product.image ? product.image : noImage} className="card-img-top" alt="..." style={{ width: '250px', height: '250px', cursor: 'pointer' }}
                         onClick={(event) => {
                             event.preventDefault()
-                            navigate(`/products/${product.id}`)
+                            navigate(`/React-e-commerce/products/${product.id}`)
 
                         }}>
 
